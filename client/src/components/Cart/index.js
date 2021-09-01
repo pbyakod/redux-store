@@ -18,7 +18,7 @@ const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 const Cart = () => {
 
   // const [state, dispatch] = useStoreContext();
-  // EDIT: creating separatee consts for dispatch and state as per redux docs
+  // EDIT: creating separate consts for dispatch and state as per redux docs
   const dispatch = useDispatch();
   const state = useSelector(state => state);
 
