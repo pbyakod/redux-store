@@ -14,7 +14,14 @@ import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
-import { StoreProvider } from './utils/GlobalState';
+
+// import { StoreProvider } from './utils/GlobalState';
+// EDIT: replacing the StoreProvider with react-redux Provider
+import { Provider } from 'react-redux';
+// ADD: importing my created store.js in ./utils
+import store from './utils/store';
+
+
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 
@@ -42,7 +49,9 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <StoreProvider>
+          {/* <StoreProvider></StoreProvider> */}
+          {/* EDIT: replacing the StoreProvider tag with the redux Provider tag that links to our store */}
+          <Provider store={ store }>
             <Nav />
             <Switch>
               <Route exact path="/" component={Home} />
@@ -53,7 +62,7 @@ function App() {
               <Route exact path="/products/:id" component={Detail} />
               <Route component={NoMatch} />
             </Switch>
-          </StoreProvider>
+          </Provider>
         </div>
       </Router>
     </ApolloProvider>
