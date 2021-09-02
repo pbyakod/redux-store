@@ -6,6 +6,10 @@
 
 This React store application has been refactored and modified to use redux instead of context api
 
+## Deployed Link
+
+https://sleepy-reaches-24299.herokuapp.com/
+
 ## Installation
 
 To install this engine on your local device, clone the repository using the following command
