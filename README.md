@@ -8,7 +8,7 @@ This React store application has been refactored and modified to use redux inste
 
 ## Deployed Link
 
-https://sleepy-reaches-24299.herokuapp.com/
+https://pbyakod-redux-store.herokuapp.com/
 
 ## Installation
 
